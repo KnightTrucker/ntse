@@ -1,2 +1,2 @@
-NTSE — SERIOUS REBUILD 2026
-Ricostruzione completa mobile-first. Nessun service worker persistente.
+NTSE SERIOUS REBUILD V2
+Servizi compatti senza numerazione editoriale. Network con cartina Europa, destinazioni e rotte animate da Turate.

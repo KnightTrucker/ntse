@@ -1,0 +1,36 @@
+{
+  "status": "prototype_frontend_only",
+  "production_backend_required": true,
+  "roles": {
+    "admin": "accesso totale, utenti, permessi, audit, mezzi, documenti, manutenzioni, costi",
+    "office": "permessi granulari per modulo",
+    "driver": "solo profilo, mezzi assegnati e propri invii"
+  },
+  "core_entities": [
+    "users",
+    "drivers",
+    "tractors",
+    "trailers",
+    "assignments",
+    "documents",
+    "expenses",
+    "damage_reports",
+    "incidents",
+    "maintenance",
+    "workshops",
+    "deadlines",
+    "audit_log"
+  ],
+  "security": [
+    "password hashing server-side",
+    "MFA opzionale/consigliata admin",
+    "RBAC server-side",
+    "private object storage",
+    "signed URLs",
+    "audit log",
+    "backup",
+    "rate limiting",
+    "session expiry",
+    "no secrets in GitHub Pages"
+  ]
+}

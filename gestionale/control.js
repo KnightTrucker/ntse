@@ -1,0 +1,1 @@
+(()=>{const bs=[...document.querySelectorAll("nav button")],vs=[...document.querySelectorAll(".view")],t=document.querySelector("#title");bs.forEach(b=>b.onclick=()=>{bs.forEach(x=>x.classList.remove("on"));b.classList.add("on");vs.forEach(v=>v.classList.toggle("active",v.id===b.dataset.v));t.textContent=b.textContent})})();

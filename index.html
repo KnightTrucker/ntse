@@ -1,69 +1,76 @@
 <!doctype html>
 <html lang="it">
 <head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <meta name="theme-color" content="#071019">
-<title>New Transport Service Europa</title>
-<link rel="stylesheet" href="assets/site.css?v=20260923-1">
+<title>New Transport Service Europa | Trasporti internazionali & logistica</title>
+<meta name="description" content="Trasporti internazionali, dedicati, groupage, ADR e logistica dal Nord Italia all'Europa.">
+<link rel="stylesheet" href="assets/site.css?v=20260923-2">
 </head>
 <body>
-<main class="stage" aria-label="New Transport Service Europa">
-  <img class="reference" src="assets/reference-home.png" alt="">
-  <nav class="hot nav" aria-label="Navigazione">
-    <a href="#home">HOME</a><a href="#azienda">AZIENDA</a><a href="#servizi">SERVIZI</a>
-    <a href="#destinazioni">DESTINAZIONI</a><a href="#flotta">FLOTTA</a><a href="#sostenibilita">SOSTENIBILITÀ</a><a href="#contatti">CONTATTI</a>
+<header class="topbar" id="home">
+  <a class="brand" href="#home" aria-label="NTSE home"><img src="assets/img/logo-dark.jpg" alt="New Transport Service Europa"></a>
+  <button class="menuBtn" type="button" aria-expanded="false" aria-controls="mainNav"><span></span><span></span><span></span><b>MENU</b></button>
+  <nav id="mainNav" class="mainNav" aria-label="Navigazione principale">
+    <a href="#home">Home</a><a href="#azienda">Azienda</a><a href="#servizi">Servizi</a><a href="#destinazioni">Destinazioni</a><a href="#flotta">Flotta</a><a href="#sostenibilita">Sostenibilità</a><a href="#contatti">Contatti</a>
   </nav>
-  <a class="private hot" href="gestionale/">🔒 &nbsp; AREA RISERVATA</a>
+  <a class="reserved" href="gestionale/"><span>🔒</span> Area riservata</a>
+</header>
 
-  <!-- Il pannello copre la mappa statica del rendering e la sostituisce con una vera rete animata. -->
-  <section class="network" id="destinazioni" aria-label="Network europeo">
-    <svg viewBox="0 0 620 620" role="img" aria-label="Rotte europee con origine Cogliate">
-      <defs>
-        <filter id="glow"><feGaussianBlur stdDeviation="4" result="blur"/><feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
-        <radialGradient id="sea"><stop stop-color="#142332"/><stop offset="1" stop-color="#07111a"/></radialGradient>
-      </defs>
-      <rect width="620" height="620" fill="url(#sea)"/>
-      <!-- Europa stilizzata, volutamente discreta ma leggibile -->
-      <g class="land">
-        <path d="M70 170 108 122 160 110 196 78 245 88 280 62 331 78 373 60 417 87 462 82 501 111 487 144 517 177 493 209 509 247 474 265 458 301 420 311 407 352 371 365 356 404 313 412 289 451 249 439 224 470 186 452 160 417 123 411 101 381 70 359 51 319 72 285 53 245 76 214Z"/>
-        <path d="M160 110 132 79 142 45 174 36 193 63 196 78M280 62 269 31 291 10 315 22 331 78M417 87 434 51 466 44 481 70 462 82"/>
-        <path d="M185 452 163 493 178 527 207 546 227 522 224 470M313 412 326 459 351 488 373 475 356 404"/>
-      </g>
-      <g class="routes">
-        <path id="r-fr" d="M355 390 Q250 345 174 306"/>
-        <path id="r-de" d="M355 390 Q389 266 413 207"/>
-        <path id="r-ch" d="M355 390 Q344 356 332 333"/>
-        <path id="r-be" d="M355 390 Q293 265 276 220"/>
-        <path id="r-nl" d="M355 390 Q312 220 323 176"/>
-        <path id="r-lu" d="M355 390 Q321 289 315 260"/>
-        <path id="r-es" d="M355 390 Q213 408 125 405"/>
-      </g>
-      <g class="moving" filter="url(#glow)">
-        <circle r="5"><animateMotion dur="3.5s" repeatCount="indefinite"><mpath href="#r-fr"/></animateMotion></circle>
-        <circle r="5"><animateMotion dur="4.2s" begin=".4s" repeatCount="indefinite"><mpath href="#r-de"/></animateMotion></circle>
-        <circle r="5"><animateMotion dur="2.5s" begin=".8s" repeatCount="indefinite"><mpath href="#r-ch"/></animateMotion></circle>
-        <circle r="5"><animateMotion dur="4s" begin="1.2s" repeatCount="indefinite"><mpath href="#r-be"/></animateMotion></circle>
-        <circle r="5"><animateMotion dur="4.6s" begin="1.6s" repeatCount="indefinite"><mpath href="#r-nl"/></animateMotion></circle>
-        <circle r="5"><animateMotion dur="3.4s" begin=".7s" repeatCount="indefinite"><mpath href="#r-lu"/></animateMotion></circle>
-        <circle r="5"><animateMotion dur="4.8s" begin="1.9s" repeatCount="indefinite"><mpath href="#r-es"/></animateMotion></circle>
-      </g>
-      <g class="places">
-        <g class="origin" transform="translate(355 390)"><circle r="12"/><circle class="pulse" r="22"/><text x="18" y="5">COGLIATE</text><text class="sub" x="18" y="20">ORIGINE NETWORK</text></g>
-        <g transform="translate(174 306)"><circle r="5"/><text x="-2" y="-14">FRANCIA</text></g>
-        <g transform="translate(413 207)"><circle r="5"/><text x="12" y="3">GERMANIA</text></g>
-        <g transform="translate(332 333)"><circle r="5"/><text x="-75" y="-10">SVIZZERA</text></g>
-        <g transform="translate(276 220)"><circle r="5"/><text x="-42" y="-14">BELGIO</text></g>
-        <g transform="translate(323 176)"><circle r="5"/><text x="-16" y="-15">PAESI BASSI</text></g>
-        <g transform="translate(315 260)"><circle r="5"/><text x="10" y="3">LUSSEMBURGO</text></g>
-        <g transform="translate(125 405)"><circle r="5"/><text x="-4" y="-14">SPAGNA</text></g>
-      </g>
-    </svg>
-  </section>
-
-  <div class="mobileFallback">
-    <h1>DAL NORD ITALIA<br><b>ALL'EUROPA.</b></h1>
-    <p>La tua merce. La nostra strada. Senza confini.</p>
+<main>
+<section class="hero section">
+  <div class="heroCopy">
+    <p class="eyebrow">TRASPORTI INTERNAZIONALI &amp; LOGISTICA</p>
+    <h1>DAL NORD ITALIA<br><em>ALL'EUROPA.</em></h1>
+    <p class="lead">La tua merce. La nostra strada. Senza confini.</p>
+    <div class="heroActions"><a class="primary" href="#preventivo">Richiedi un preventivo</a><a class="ghost" href="#destinazioni">Scopri il network</a></div>
+    <div class="quickFacts"><span><b>7</b> Paesi principali</span><span><b>FTL / LTL</b> Completi e groupage</span><span><b>ADR</b> Soluzioni dedicate</span></div>
   </div>
+  <div class="heroVisual"><img src="assets/img/hero-truck.jpg" alt="Autotrasporto internazionale NTSE"><div class="heroGlow"></div></div>
+</section>
+
+<section id="azienda" class="section company">
+ <div><p class="eyebrow">NEW TRANSPORT SERVICE EUROPA</p><h2>UN PARTNER, <em>SEMPRE.</em></h2></div>
+ <p class="bigText">Trasporto e logistica con un'impostazione semplice: contatto diretto, controllo operativo e soluzioni costruite sulla tratta.</p>
+ <div class="stats"><article><strong>Europa</strong><span>Network internazionale</span></article><article><strong>GPS</strong><span>Controllo del viaggio</span></article><article><strong>H24</strong><span>Operatività su richiesta</span></article></div>
+</section>
+
+<section id="servizi" class="section services">
+ <div class="sectionHead"><p class="eyebrow">SERVIZI</p><h2>OGNI CARICO HA <em>LA SUA STRADA.</em></h2></div>
+ <div class="cards">
+  <article><span class="ico">▱</span><h3>Trasporti dedicati</h3><p>Soluzioni dirette per carichi completi, urgenze ed espresso.</p><a href="#preventivo">Richiedi disponibilità →</a></article>
+  <article><span class="ico">▦</span><h3>Groupage</h3><p>Spedizioni parziali e consolidamento sulle principali direttrici europee.</p><a href="#preventivo">Parlaci della merce →</a></article>
+  <article><span class="ico">◇</span><h3>ADR</h3><p>Gestione di trasporti ADR secondo requisiti, documentazione e mezzo necessario.</p><a href="#preventivo">Verifica la tratta →</a></article>
+  <article><span class="ico">⌂</span><h3>Logistica</h3><p>Supporto a deposito, movimentazione e organizzazione dei flussi.</p><a href="#contatti">Contattaci →</a></article>
+ </div>
+</section>
+
+<section id="destinazioni" class="section networkSection">
+ <div class="sectionHead"><p class="eyebrow">NETWORK EUROPEO</p><h2>DA COGLIATE, <em>VERSO L'EUROPA.</em></h2><p>Le direttrici principali rappresentate sulla rete NTSE.</p></div>
+ <div class="networkWrap">
+  <svg class="europe" viewBox="0 0 620 620" role="img" aria-label="Rotte europee con origine Cogliate">
+   <defs><filter id="glow"><feGaussianBlur stdDeviation="4" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter></defs>
+   <g class="land"><path d="M70 170 108 122 160 110 196 78 245 88 280 62 331 78 373 60 417 87 462 82 501 111 487 144 517 177 493 209 509 247 474 265 458 301 420 311 407 352 371 365 356 404 313 412 289 451 249 439 224 470 186 452 160 417 123 411 101 381 70 359 51 319 72 285 53 245 76 214Z"/><path d="M160 110 132 79 142 45 174 36 193 63 196 78M280 62 269 31 291 10 315 22 331 78M417 87 434 51 466 44 481 70 462 82"/><path d="M185 452 163 493 178 527 207 546 227 522 224 470M313 412 326 459 351 488 373 475 356 404"/></g>
+   <g class="routes"><path id="rfr" d="M355 390 Q250 345 174 306"/><path id="rde" d="M355 390 Q389 266 413 207"/><path id="rch" d="M355 390 Q344 356 332 333"/><path id="rbe" d="M355 390 Q293 265 276 220"/><path id="rnl" d="M355 390 Q312 220 323 176"/><path id="rlu" d="M355 390 Q321 289 315 260"/><path id="res" d="M355 390 Q213 408 125 405"/></g>
+   <g class="moving" filter="url(#glow)"><circle r="5"><animateMotion dur="3.5s" repeatCount="indefinite"><mpath href="#rfr"/></animateMotion></circle><circle r="5"><animateMotion dur="4.2s" begin=".4s" repeatCount="indefinite"><mpath href="#rde"/></animateMotion></circle><circle r="5"><animateMotion dur="2.5s" begin=".8s" repeatCount="indefinite"><mpath href="#rch"/></animateMotion></circle><circle r="5"><animateMotion dur="4s" begin="1.2s" repeatCount="indefinite"><mpath href="#rbe"/></animateMotion></circle><circle r="5"><animateMotion dur="4.6s" begin="1.6s" repeatCount="indefinite"><mpath href="#rnl"/></animateMotion></circle><circle r="5"><animateMotion dur="3.4s" begin=".7s" repeatCount="indefinite"><mpath href="#rlu"/></animateMotion></circle><circle r="5"><animateMotion dur="4.8s" begin="1.9s" repeatCount="indefinite"><mpath href="#res"/></animateMotion></circle></g>
+   <g class="places"><g class="origin" transform="translate(355 390)"><circle r="12"/><circle class="pulse" r="22"/><text x="18" y="5">COGLIATE</text></g><g transform="translate(174 306)"><circle r="5"/><text x="-2" y="-14">FRANCIA</text></g><g transform="translate(413 207)"><circle r="5"/><text x="12" y="3">GERMANIA</text></g><g transform="translate(332 333)"><circle r="5"/><text x="-75" y="-10">SVIZZERA</text></g><g transform="translate(276 220)"><circle r="5"/><text x="-42" y="-14">BELGIO</text></g><g transform="translate(323 176)"><circle r="5"/><text x="-16" y="-15">PAESI BASSI</text></g><g transform="translate(315 260)"><circle r="5"/><text x="10" y="3">LUSSEMBURGO</text></g><g transform="translate(125 405)"><circle r="5"/><text x="-4" y="-14">SPAGNA</text></g></g>
+  </svg>
+  <div class="countryList"><span>🇫🇷 Francia</span><span>🇩🇪 Germania</span><span>🇨🇭 Svizzera</span><span>🇧🇪 Belgio</span><span>🇳🇱 Paesi Bassi</span><span>🇱🇺 Lussemburgo</span><span>🇪🇸 Spagna</span></div>
+ </div>
+</section>
+
+<section id="flotta" class="section fleet"><div class="sectionHead"><p class="eyebrow">FLOTTA</p><h2>IL MEZZO GIUSTO, <em>PER IL VIAGGIO GIUSTO.</em></h2></div><div class="fleetGrid"><article><b>13,60 m</b><span>Semirimorchi</span></article><article><b>90 m³</b><span>Capacità indicativa</span></article><article><b>Euro 6</b><span>Efficienza operativa</span></article><article><b>GPS</b><span>Tracciamento</span></article></div></section>
+
+<section id="sostenibilita" class="section sustainability"><p class="eyebrow">SOSTENIBILITÀ</p><h2>PIÙ EFFICIENZA.<br><em>MENO CHILOMETRI VUOTI.</em></h2><p>La sostenibilità nel trasporto passa anche dalla pianificazione: saturazione, percorsi coerenti e mezzi efficienti.</p></section>
+
+<section id="preventivo" class="section quote">
+ <div><p class="eyebrow">PREVENTIVO</p><h2>RACCONTACI <em>IL VIAGGIO.</em></h2><p>Inserisci i dati essenziali: prepariamo la richiesta e apriamo il messaggio e-mail pronto da inviare.</p></div>
+ <form id="quoteForm"><label>Partenza<input name="from" required placeholder="Città / CAP"></label><label>Destinazione<input name="to" required placeholder="Città / CAP"></label><label>Merce<input name="goods" required placeholder="Tipologia / peso"></label><label>Data<input name="date" type="date"></label><label class="wide">Note<textarea name="notes" rows="4" placeholder="ADR, sponda, orari, esigenze particolari..."></textarea></label><button class="primary" type="submit">Prepara richiesta</button></form>
+</section>
+
+<section id="contatti" class="section contact"><div><p class="eyebrow">CONTATTI</p><h2>PARLIAMO DI <em>TRASPORTO.</em></h2></div><div class="contactGrid"><a href="tel:+39029660046"><small>TELEFONO</small><b>+39 02 9660046</b></a><a href="mailto:traffico@transportserviceitalia.it"><small>EMAIL TRAFFICO</small><b>traffico@transportserviceitalia.it</b></a><div><small>SEDE</small><b>Via Guido Rossa 5 · Cogliate (MB)</b></div><a href="gestionale/"><small>ACCESSO INTERNO</small><b>Area riservata →</b></a></div></section>
 </main>
-<script src="assets/site.js?v=20260923-1"></script>
+<footer><img src="assets/img/logo-dark.jpg" alt="NTSE"><p>© 2026 New Transport Service Europa · Trasporti internazionali &amp; logistica</p><a href="#home">Torna su ↑</a></footer>
+<script src="assets/site.js?v=20260923-2"></script>
 </body></html>
